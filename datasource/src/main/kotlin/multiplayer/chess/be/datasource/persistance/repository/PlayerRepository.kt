@@ -14,5 +14,4 @@ interface PlayerRepository: CrudRepository<PlayerEntity,Int> {
 
     fun deleteByPlayerId(id: Int)
 
-    fun updateByPlayerId(id: Int)
 }

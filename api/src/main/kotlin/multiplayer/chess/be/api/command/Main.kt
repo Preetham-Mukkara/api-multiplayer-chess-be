@@ -5,13 +5,9 @@ package multiplayer.chess.be.api.command
 
 import io.micronaut.runtime.Micronaut
 
-object Main {
-    @Suppress("MemberNameEqualsClassName")
-    @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         System.getProperties().setProperty("java.net.preferIpv4Stack","true")
 
-        Micronaut.build().packages("multiplayer").mainClass(Main.javaClass).start()
+        Micronaut.build().packages("multiplayer").start()
         println("Hello homies")
     }
-}

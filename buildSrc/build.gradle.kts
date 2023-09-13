@@ -10,8 +10,10 @@ plugins {
 repositories {
     // Use the plugin portal to apply community plugins in convention plugins.
     gradlePluginPortal()
+    mavenCentral()
 }
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.20")
+    implementation("org.jetbrains.kotlin:kotlin-allopen:1.9.10")
 }

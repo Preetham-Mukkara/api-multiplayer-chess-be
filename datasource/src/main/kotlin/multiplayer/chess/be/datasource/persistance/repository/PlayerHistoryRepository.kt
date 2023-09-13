@@ -14,6 +14,4 @@ interface PlayerHistoryRepository: CrudRepository<PlayerHistoryEntity,Int> {
 
     fun deleteByPlayerId(id: Int)
 
-    fun updateByPlayerId(id: Int)
-
 }
