@@ -1,0 +1,20 @@
+#These database credentials are not permanent - Heroku rotates credentials periodically
+micronaut:
+  application:
+    name: api-multiplayer-chess-be
+
+datasources:
+  default:
+    url: jdbc:postgresql://ec2-54-156-233-91.compute-1.amazonaws.com:5432/defktnt8km06ra
+    username: dcavthbfrtrcqw
+    password: 75bb46b0c369f90a5d63a97f0ead320e772146cadde5096783b03b82f3b54847
+    driver-class-name: org.postgresql.Driver
+    dialect: POSTGRES
+    validation-timeout: 2000
+    connection-timeout: 3000
+
+flyway:
+  locations: classpath:db/migration
+  datasources:
+    default:
+      enabled: true
