@@ -8,6 +8,6 @@ import io.micronaut.runtime.Micronaut
     fun main() {
         System.getProperties().setProperty("java.net.preferIpv4Stack","true")
 
-        Micronaut.build().packages("multiplayer").start()
+        Micronaut.build().packages("multiplayer.chess.be.api.command").start()
         println("Hello homies")
     }
