@@ -7,12 +7,13 @@ plugins {
     id("io.micronaut.aot") version "4.0.3"
 }
 
-version = "0.1"
+version = "1"
 group = "multiplayer.chess.be"
 
 val kotlinVersion=project.properties.get("kotlinVersion")
 val kotestVersion=project.properties.get("kotestVersion")
 val mockkVersion=project.properties.get("mockkVersion")
+
 repositories {
     mavenCentral()
 }
