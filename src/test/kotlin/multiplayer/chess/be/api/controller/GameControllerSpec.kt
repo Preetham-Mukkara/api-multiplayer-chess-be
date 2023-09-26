@@ -18,7 +18,7 @@ class GameControllerSpec(
         val request = HttpRequest.GET<String>("/hello")
         val response = client.toBlocking().retrieve(request)
 
-        response shouldBe "Hello World"
+        response shouldBe "Hello World!!"
     }
 
 })
