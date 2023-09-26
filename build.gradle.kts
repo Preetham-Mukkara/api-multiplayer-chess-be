@@ -11,6 +11,8 @@ version = "0.1"
 group = "multiplayer.chess.be"
 
 val kotlinVersion=project.properties.get("kotlinVersion")
+val kotestVersion=project.properties.get("kotestVersion")
+val mockkVersion=project.properties.get("mockkVersion")
 repositories {
     mavenCentral()
 }
@@ -21,6 +23,9 @@ dependencies {
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    testImplementation("io.micronaut.test:micronaut-test-kotest5:4.0.2")
+    testImplementation("io.mockk:mockk:${mockkVersion}")
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:${kotestVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.micronaut.data:micronaut-data-jdbc:3.10.0")
