@@ -10,7 +10,7 @@ class GameController {
     @Get(value = "/hello")
     @Produces(MediaType.TEXT_PLAIN)
     fun index(): String {
-        return "Hello World"
+        return "Hello World!!"
     }
 
 }
