@@ -1,3 +1,5 @@
+2v2 Chess Multiplayer Game Server
+
 ## Micronaut 4.1.2 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.1.2/guide/index.html)
