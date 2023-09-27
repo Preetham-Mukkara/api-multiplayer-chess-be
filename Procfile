@@ -1,1 +1,1 @@
-web: ./gradlew run
+web: java -jar build/libs/api-multiplayer-chess-be-1-all.jar
