@@ -64,7 +64,14 @@ tasks {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
     }
+    val stage by registering {
+        dependsOn(build, clean)
+    }
+    build {
+        mustRunAfter(clean)
+    }
 }
+
 graalvmNative.toolchainDetection.set(false)
 micronaut {
     runtime("netty")
