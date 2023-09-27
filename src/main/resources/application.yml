@@ -14,9 +14,11 @@ datasources:
     dialect: POSTGRES
     sslmode: require
     hikari:
-      maximumPoolSize: 10
-      minimumIdle: 2
+      maximumPoolSize: 1
+      minimumIdle: 1
       connectionTimeout: 30000
+      idleTimeout: 600000      # Set the idle timeout in milliseconds
+      maxLifetime: 1800000
 
 flyway:
   locations: classpath:db/migration
