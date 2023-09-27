@@ -14,7 +14,7 @@ datasources:
     dialect: POSTGRES
     sslmode: require
     hikari:
-      maximumPoolSize: 1
+      maximumPoolSize: 2
       minimumIdle: 1
       connectionTimeout: 30000
       idleTimeout: 600000      # Set the idle timeout in milliseconds
