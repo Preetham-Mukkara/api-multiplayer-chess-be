@@ -3,7 +3,7 @@ micronaut:
   application:
     name: api-multiplayer-chess-be
   server:
-    port: 8080
+    port: ${PORT:8080}
 
 datasources:
   default:
