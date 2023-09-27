@@ -6,9 +6,26 @@ micronaut:
   server:
     port: 8081
 
+datasources:
+  default:
+    url: jdbc:postgresql://ec2-52-21-61-131.compute-1.amazonaws.com:5432/ddupsbpeifg1ue
+    username: inxgpyyaszmzlv
+    password: 8e3e702143d5a3c59d3104fe3a79c395bbcafda10376bcecfc5c49a742714838
+    driver-class-name: org.postgresql.Driver
+    dialect: POSTGRES
+    sslmode: require
+    hikari:
+      maximumPoolSize: 10
+      minimumIdle: 2
+      connectionTimeout: 30000
+
 flyway:
   locations: classpath:db/migration
   datasources:
     default:
       enabled: true
 
+jpa:
+  default:
+    entity-scan:
+      packages: 'multiplayer.chess.be'

@@ -43,6 +43,7 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jooq")
     implementation("io.micronaut.flyway:micronaut-flyway")
     implementation("javax.persistence:javax.persistence-api:2.2")
+    implementation("org.postgresql:postgresql:15.4.0")
 }
 
 
