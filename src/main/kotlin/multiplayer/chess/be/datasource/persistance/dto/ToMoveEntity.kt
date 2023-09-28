@@ -9,5 +9,5 @@ fun Move.toMoveEntity(gameEntity: GameEntity) = MoveEntity(
     game = gameEntity,
     player = player.toPlayerEntity(),
     moveString = moveString,
-    timestamp = timestamp
+    moveTimestamp = moveTimestamp
 )

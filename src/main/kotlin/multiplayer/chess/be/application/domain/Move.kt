@@ -7,5 +7,5 @@ data class Move(
     val game: Game,
     val player: Player,
     val moveString: String,
-    val timestamp: LocalDateTime,
+    val moveTimestamp: LocalDateTime,
 )

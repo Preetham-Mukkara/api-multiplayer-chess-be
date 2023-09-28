@@ -22,5 +22,5 @@ data class MoveEntity(
     @JoinColumn(name = "player_id")
     val player: PlayerEntity,
     val moveString: String,
-    val timestamp: LocalDateTime
+    val moveTimestamp: LocalDateTime
 )
