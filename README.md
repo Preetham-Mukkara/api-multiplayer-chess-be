@@ -1,4 +1,4 @@
-2v2 Chess Multiplayer Game Server
+2v2 Chess Multiplayer Game Server deployed on Heroku 
 
 ## Micronaut 4.1.2 Documentation
 
