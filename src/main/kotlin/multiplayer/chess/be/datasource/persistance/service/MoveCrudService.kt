@@ -16,11 +16,11 @@ class MoveCrudService (
         }
     }
 
-    suspend fun fetch(playerId: Int): MoveEntity {
-        return moveRepository.findByPlayerId(playerId)
+    suspend fun fetch(moveId: Int): MoveEntity {
+        return moveRepository.findByMoveId(moveId)
     }
 
-    suspend fun delete(playerId: Int): Unit {
-        return moveRepository.deleteByPlayerId(playerId)
+    suspend fun delete(moveId: Int): Unit {
+        return moveRepository.deleteByMoveId(moveId)
     }
 }

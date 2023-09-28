@@ -22,7 +22,4 @@ class GameCrudService (
         return gameRepository.deleteByGameId(gameId)
     }
 
-    suspend fun update(gameId: Int): Unit {
-        return gameRepository.updateByGameId(gameId)
-    }
 }
