@@ -10,8 +10,8 @@ interface MoveRepository: CrudRepository<MoveEntity,Int> {
 
     fun save(entity: MoveEntity): MoveEntity
 
-    fun findByPlayerId(playerId: Int): MoveEntity
+    fun findByMoveId(moveId: Int): MoveEntity
 
-    fun deleteByPlayerId(playerId: Int)
+    fun deleteByMoveId(moveId: Int)
 
 }
