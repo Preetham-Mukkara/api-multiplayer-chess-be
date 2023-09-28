@@ -10,10 +10,8 @@ interface GameRepository: CrudRepository<GameEntity,Int> {
 
     fun save(entity: GameEntity): GameEntity
 
-    fun findByGameId(id: Int): GameEntity
+    fun findByGameId(gameId: Int): GameEntity
 
-    fun deleteByGameId(id: Int)
-
-    fun updateByGameId(id: Int)
+    fun deleteByGameId(gameId: Int)
 
 }
