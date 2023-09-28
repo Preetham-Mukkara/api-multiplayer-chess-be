@@ -1,7 +1,6 @@
 package multiplayer.chess.be.application.domain
 
 data class Player(
-    val name: String,
-    val color: Color,
-    val team: Team
+    val playerId: Int,
+    val username: String,
 )

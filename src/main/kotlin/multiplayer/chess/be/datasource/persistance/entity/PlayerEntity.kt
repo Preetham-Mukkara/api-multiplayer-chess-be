@@ -11,8 +11,5 @@ import javax.persistence.Table
 data class PlayerEntity(
     @field:Id @field:GeneratedValue(GeneratedValue.Type.IDENTITY)
     var playerId: Int,
-
     var username: String,
-    var passwd: String,
-    var email: String,
 )

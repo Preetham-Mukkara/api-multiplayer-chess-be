@@ -3,14 +3,14 @@ package multiplayer.chess.be.datasource.persistance.repository
 import io.micronaut.data.jdbc.annotation.JdbcRepository
 import io.micronaut.data.model.query.builder.sql.Dialect
 import io.micronaut.data.repository.CrudRepository
-import multiplayer.chess.be.datasource.persistance.entity.GameHistoryEntity
+import multiplayer.chess.be.datasource.persistance.entity.GameEntity
 
 @JdbcRepository(dialect = Dialect.POSTGRES)
-interface GameHistoryRepository: CrudRepository<GameHistoryEntity,Int> {
+interface GameRepository: CrudRepository<GameEntity,Int> {
 
-    fun save(entity: GameHistoryEntity): GameHistoryEntity
+    fun save(entity: GameEntity): GameEntity
 
-    fun findByGameId(id: Int): GameHistoryEntity
+    fun findByGameId(id: Int): GameEntity
 
     fun deleteByGameId(id: Int)
 

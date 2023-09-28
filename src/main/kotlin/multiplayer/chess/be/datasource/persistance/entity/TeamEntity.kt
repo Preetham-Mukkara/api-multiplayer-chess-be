@@ -3,16 +3,15 @@ package multiplayer.chess.be.datasource.persistance.entity
 import io.micronaut.data.annotation.MappedEntity
 import io.micronaut.data.annotation.Id
 import io.micronaut.data.annotation.GeneratedValue
+import javax.persistence.OneToMany
 import javax.persistence.Table
 
 @MappedEntity
-@Table(name = "player_move_history")
-data class PlayerMoveHistoryEntity(
+@Table(name = "team")
+data class TeamEntity(
     @field:Id @field:GeneratedValue(GeneratedValue.Type.IDENTITY)
-    var gameId: Int,
+    var teamId: Int,
 
-    var moveNumber: Int,
-    var playerId: Int,
-    var source: String,
-    var destination: String,
+    var playerOne: PlayerEntity,
+    var playerTwo: PlayerEntity
 )

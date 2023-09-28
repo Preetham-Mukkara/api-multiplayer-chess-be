@@ -1,26 +1,26 @@
 package multiplayer.chess.be.datasource.persistance.service
 
 import jakarta.inject.Singleton
-import multiplayer.chess.be.datasource.persistance.entity.PlayerMoveHistoryEntity
-import multiplayer.chess.be.datasource.persistance.repository.PlayerMoveHistoryRepository
+import multiplayer.chess.be.datasource.persistance.entity.MoveEntity
+import multiplayer.chess.be.datasource.persistance.repository.MoveRepository
 
 @Singleton
 class MoveCrudService (
-    private val playerMoveHistoryRepository: PlayerMoveHistoryRepository
+    private val moveRepository: MoveRepository
 ) {
-    suspend fun insert(move: PlayerMoveHistoryEntity) :Unit {
+    suspend fun insert(move: MoveEntity) :Unit {
         try{
-            playerMoveHistoryRepository.save(move)
+            moveRepository.save(move)
         }catch(e: Error){
             println(e)
         }
     }
 
-    suspend fun fetch(playerId: Int): PlayerMoveHistoryEntity {
-        return playerMoveHistoryRepository.findByPlayerId(playerId)
+    suspend fun fetch(playerId: Int): MoveEntity {
+        return moveRepository.findByPlayerId(playerId)
     }
 
     suspend fun delete(playerId: Int): Unit {
-        return playerMoveHistoryRepository.deleteByPlayerId(playerId)
+        return moveRepository.deleteByPlayerId(playerId)
     }
 }
