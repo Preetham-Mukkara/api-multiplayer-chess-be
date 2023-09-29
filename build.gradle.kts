@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
     ksp("io.micronaut.serde:micronaut-serde-processor")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
@@ -44,6 +45,7 @@ dependencies {
     implementation("io.micronaut.flyway:micronaut-flyway")
     implementation("javax.persistence:javax.persistence-api:2.2")
     implementation("org.postgresql:postgresql:15.4.0")
+    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.0.7")
 }
 
 
