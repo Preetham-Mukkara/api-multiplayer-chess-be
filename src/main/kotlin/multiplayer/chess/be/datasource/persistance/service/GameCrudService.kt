@@ -1,10 +1,12 @@
 package multiplayer.chess.be.datasource.persistance.service
 
+import jakarta.inject.Singleton
 import multiplayer.chess.be.application.domain.Game
 import multiplayer.chess.be.datasource.persistance.dto.toGame
 import multiplayer.chess.be.datasource.persistance.entity.GameEntity
 import multiplayer.chess.be.datasource.persistance.repository.GameRepository
 
+@Singleton
 class GameCrudService (
     private val gameRepository: GameRepository
 ) {
