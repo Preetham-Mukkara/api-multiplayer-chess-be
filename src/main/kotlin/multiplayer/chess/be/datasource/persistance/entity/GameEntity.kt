@@ -14,7 +14,7 @@ data class GameEntity(
     var gameId: Int,
 
     @OneToMany(mappedBy = "game")
-    var moves: List<MoveEntity>,
+    var moves: List<MoveEntity>?,
     @ManyToOne
     @JoinColumn(name = "white_team_id")
     var whiteTeam: TeamEntity,

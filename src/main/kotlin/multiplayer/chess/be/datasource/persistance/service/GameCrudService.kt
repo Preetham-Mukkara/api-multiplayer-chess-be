@@ -1,17 +1,15 @@
 package multiplayer.chess.be.datasource.persistance.service
 
+import multiplayer.chess.be.application.domain.Game
+import multiplayer.chess.be.datasource.persistance.dto.toGame
 import multiplayer.chess.be.datasource.persistance.entity.GameEntity
 import multiplayer.chess.be.datasource.persistance.repository.GameRepository
 
 class GameCrudService (
     private val gameRepository: GameRepository
 ) {
-    suspend fun insert(game: GameEntity): Unit{
-        try{
-            gameRepository.save(game)
-        } catch (e: Error) {
-            println(e)
-        }
+    suspend fun insert(game: GameEntity): Game {
+           return gameRepository.save(game).toGame()
     }
 
     suspend fun fetch(gameId: Int): GameEntity {
