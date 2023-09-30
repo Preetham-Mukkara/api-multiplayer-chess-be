@@ -11,7 +11,7 @@ class GameCrudService (
     private val gameRepository: GameRepository
 ) {
     suspend fun insert(game: GameEntity): Game {
-           return gameRepository.save(game).toGame()
+        return gameRepository.save(game).toGame()
     }
 
     suspend fun fetch(gameId: Int): GameEntity {

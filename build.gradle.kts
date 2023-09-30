@@ -32,6 +32,7 @@ dependencies {
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.micronaut.data:micronaut-data-jdbc:3.10.0")
     runtimeOnly("org.yaml:snakeyaml")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1-native-mt")
     testImplementation("io.micronaut:micronaut-http-client")
     ksp("io.micronaut:micronaut-inject-java")
     implementation("io.micronaut:micronaut-inject")
@@ -44,7 +45,11 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jooq")
     implementation("io.micronaut.flyway:micronaut-flyway")
     implementation("javax.persistence:javax.persistence-api:2.2")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
     implementation("org.postgresql:postgresql:15.4.0")
+    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.0.7")
+    implementation("org.apache.sling:org.apache.sling.extensions.slf4j.mdc:1.0.0")
+    runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.7.2")
     implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.0.7")
 }
 

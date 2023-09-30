@@ -1,5 +1,6 @@
 package multiplayer.chess.be.api.controller
 
+import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Produces
@@ -20,7 +21,7 @@ class GameController(
 
     @Post(value = "/testGame")
     @Produces(MediaType.APPLICATION_JSON)
-    suspend fun testGame(): Game {
-        return gameService.insertTestGame()
+    suspend fun testGame(): HttpResponse<*> {
+        return HttpResponse.created(gameService.insertTestGame())
     }
 }
