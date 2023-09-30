@@ -1,5 +1,9 @@
 2v2 Chess Multiplayer Game Server deployed on Heroku 
 
+Potential Improvements: 
+- Since this is a small scale project there isn't as much of an empahsis for async/non-blocking code. However in the case this project expands to a lot of requests then Kotlin coroutines provide a
+  nice way to implement scalability via async/non-blocking code.
+
 ## Micronaut 4.1.2 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.1.2/guide/index.html)
