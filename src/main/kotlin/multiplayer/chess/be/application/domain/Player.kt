@@ -1,12 +1,9 @@
 package multiplayer.chess.be.application.domain
 
-import com.fasterxml.jackson.annotation.JsonInclude
-import com.fasterxml.jackson.annotation.JsonProperty
+import io.micronaut.serde.annotation.Serdeable
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Serdeable.Serializable
 data class Player(
-    @JsonProperty("playerId")
     val playerId: Int,
-    @JsonProperty("username")
     val username: String,
 )
