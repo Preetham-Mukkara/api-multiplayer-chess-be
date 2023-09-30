@@ -1,6 +1,8 @@
 package multiplayer.chess.be.datasource.persistance.service
 
 import jakarta.inject.Singleton
+import multiplayer.chess.be.application.domain.Player
+import multiplayer.chess.be.datasource.persistance.dto.toPlayerEntity
 import multiplayer.chess.be.datasource.persistance.entity.PlayerEntity
 import multiplayer.chess.be.datasource.persistance.repository.PlayerRepository
 
@@ -8,9 +10,9 @@ import multiplayer.chess.be.datasource.persistance.repository.PlayerRepository
 class PlayerCrudService (
     private val playerRepository: PlayerRepository
 ){
-    suspend fun insert(player: PlayerEntity): Unit {
+    suspend fun insert(player: Player): Unit {
         try{
-            playerRepository.save(player)
+            playerRepository.save(player.toPlayerEntity())
         } catch (e: Error){
             println(e)
         }
