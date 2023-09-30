@@ -38,6 +38,7 @@ dependencies {
     implementation("io.micronaut:micronaut-inject")
     ksp(platform("io.micronaut:micronaut-bom:3.10.1"))
     implementation(platform("io.micronaut:micronaut-bom:3.10.1"))
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.6")
     ksp("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-validation")
     ksp("io.micronaut.data:micronaut-data-processor:3.10.0")
