@@ -22,6 +22,10 @@ class GameController(
     @Post(value = "/testGame")
     @Produces(MediaType.APPLICATION_JSON)
     suspend fun testGame(): HttpResponse<*> {
-        return HttpResponse.created(gameService.insertTestGame())
+        return try {
+            HttpResponse.created(gameService.insertTestGame())
+        } catch(e: Exception){
+            HttpResponse.serverError(e)
+        }
     }
 }
