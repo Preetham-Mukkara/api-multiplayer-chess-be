@@ -27,7 +27,7 @@ class GameController(
     suspend fun testPlayer(): HttpResponse<*> {
         return try {
             val testPlayer = Player(
-                playerId = 0,
+                playerId = 0, //auto-generated
                 username = "fake"
             )
             HttpResponse.created(playerService.insertPlayer(testPlayer))

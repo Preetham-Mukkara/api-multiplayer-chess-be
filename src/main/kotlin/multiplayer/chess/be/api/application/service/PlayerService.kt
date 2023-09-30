@@ -6,7 +6,7 @@ import multiplayer.chess.be.datasource.persistance.service.PlayerCrudService
 
 @Singleton
 class PlayerService (private val playerCrudService: PlayerCrudService ) {
-    suspend fun insertPlayer(player: Player){
+    suspend fun insertPlayer(player: Player): Player{
         return playerCrudService.insert(player)
     }
 }
